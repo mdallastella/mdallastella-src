@@ -1,0 +1,9 @@
+{
+  "name": "Contacts",
+  "links":
+  {
+    "E-mail": "mailto:marco@dallastella.name",
+    "XMPP": "xmpp:mdallastella@404.city?message",
+    "Keybase": "https://keybase.io/mdallastella"
+  }
+}

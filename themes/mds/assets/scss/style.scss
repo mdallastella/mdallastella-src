@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/* oxygen-regular - latin */
+@font-face {
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-display: auto;
+    font-weight: 400;
+    src: url('../fonts/oxygen-v7-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Oxygen Regular'), local('Oxygen-Regular'),
+	 url('../fonts/oxygen-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	 url('../fonts/oxygen-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+	 url('../fonts/oxygen-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+	 url('../fonts/oxygen-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+	 url('../fonts/oxygen-v7-latin-regular.svg#Oxygen') format('svg'); /* Legacy iOS */
+}
+/* oxygen-700 - latin */
+@font-face {
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-display: auto;
+    font-weight: 700;
+    src: url('../fonts/oxygen-v7-latin-700.eot'); /* IE9 Compat Modes */
+    src: local('Oxygen Bold'), local('Oxygen-Bold'),
+	 url('../fonts/oxygen-v7-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	 url('../fonts/oxygen-v7-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+	 url('../fonts/oxygen-v7-latin-700.woff') format('woff'), /* Modern Browsers */
+	 url('../fonts/oxygen-v7-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+	 url('../fonts/oxygen-v7-latin-700.svg#Oxygen') format('svg'); /* Legacy iOS */
+}
+
+// Set your brand colors
+$teal: #07889b;
+$paper: #d5d5d5;
+
+// Update Bulma's global variables
+$family-sans-serif: 'Oxygen', sans-serif;
+$primary: $teal;
+$link: $primary;
+$link-hover: darken($primary, 15);
+
+// Update some of Bulma's component variables
+$body-background-color: $paper;
+
+body {
+    background-image: url('../img/noise.png');
+}
+
+.manifesto {
+    padding-bottom: 2rem;
+}
+
+em {
+    font-style: normal;
+    color: $primary;
+}
+
+// Disable the widescreen breakpoint
+$widescreen-enabled: false;
+
+// Disable the fullhd breakpoint
+$fullhd-enabled: false;
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import '../node_modules/bulma/sass/utilities/mixins';
+@import "../node_modules/bulma/sass/grid/columns.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/content.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/layout/hero.sass";
+@import "../node_modules/bulma/sass/layout/section.sass";
+
+.cover {
+    background-image: url(../img/me.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 85vh;
+
+    @include until($tablet) {
+	height: 50vh;
+	margin-bottom: 30px;
+    }
+}
