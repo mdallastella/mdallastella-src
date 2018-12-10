@@ -21,6 +21,6 @@
   <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <!-- Style -->
-  {{ $style := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
+  {{ $style := resources.Get "scss/style.scss" | toCSS | minify }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
